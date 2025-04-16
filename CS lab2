@@ -1,0 +1,25 @@
+using System;
+
+class Program
+{
+    // Global variable (accessible to all methods in the class)
+    static int number = 10;
+
+    static void Main()
+    {
+        // Local variable (only accessible inside Main)
+        int number = 5;
+
+        Console.WriteLine("Local variable: " + number);     // uses local variable
+        Console.WriteLine("Global variable: " + Program.number); // accesses global variable using class name
+
+        ShowDouble();
+    }
+
+    static void ShowDouble()
+    {
+        // Uses the global variable
+        int doubleValue = number * 2;
+        Console.WriteLine("Double of global variable: " + doubleValue);
+    }
+}
